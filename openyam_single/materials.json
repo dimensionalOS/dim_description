@@ -1,0 +1,132 @@
+{
+ "base_0.obj": {
+  "rgba": [
+   0.11,
+   0.11,
+   0.115,
+   1.0
+  ],
+  "metallic": 0.55,
+  "roughness": 0.42
+ },
+ "base_1.obj": {
+  "rgba": [
+   0.1,
+   0.1,
+   0.1,
+   1.0
+  ],
+  "metallic": 0.2,
+  "roughness": 0.75
+ },
+ "arm_link_1.obj": {
+  "rgba": [
+   0.11,
+   0.11,
+   0.115,
+   1.0
+  ],
+  "metallic": 0.55,
+  "roughness": 0.42
+ },
+ "arm_link_2.obj": {
+  "rgba": [
+   0.11,
+   0.11,
+   0.115,
+   1.0
+  ],
+  "metallic": 0.55,
+  "roughness": 0.42
+ },
+ "arm_link_3_0.obj": {
+  "rgba": [
+   0.11,
+   0.11,
+   0.115,
+   1.0
+  ],
+  "metallic": 0.55,
+  "roughness": 0.42
+ },
+ "arm_link_3_1.obj": {
+  "rgba": [
+   0.1,
+   0.1,
+   0.1,
+   1.0
+  ],
+  "metallic": 0.2,
+  "roughness": 0.75
+ },
+ "arm_link_4_0.obj": {
+  "rgba": [
+   0.11,
+   0.11,
+   0.115,
+   1.0
+  ],
+  "metallic": 0.55,
+  "roughness": 0.42
+ },
+ "arm_link_4_1.obj": {
+  "rgba": [
+   0.9,
+   0.9,
+   0.88,
+   1.0
+  ],
+  "metallic": 0.0,
+  "roughness": 0.5
+ },
+ "arm_link_5.obj": {
+  "rgba": [
+   0.11,
+   0.11,
+   0.115,
+   1.0
+  ],
+  "metallic": 0.55,
+  "roughness": 0.42
+ },
+ "arm_link_6.obj": {
+  "rgba": [
+   0.11,
+   0.11,
+   0.115,
+   1.0
+  ],
+  "metallic": 0.55,
+  "roughness": 0.42
+ },
+ "hand.obj": {
+  "rgba": [
+   0.1,
+   0.1,
+   0.1,
+   1.0
+  ],
+  "metallic": 0.2,
+  "roughness": 0.75
+ },
+ "hand_right_finger.obj": {
+  "rgba": [
+   0.1,
+   0.1,
+   0.1,
+   1.0
+  ],
+  "metallic": 0.2,
+  "roughness": 0.75
+ },
+ "hand_left_finger.obj": {
+  "rgba": [
+   0.1,
+   0.1,
+   0.1,
+   1.0
+  ],
+  "metallic": 0.2,
+  "roughness": 0.75
+ }
+}

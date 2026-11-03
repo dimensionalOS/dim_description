@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="openyam_single">
+  <compiler angle="radian" meshdir="meshes" />
+  <asset>
+    <mesh name="base_0" content_type="model/obj" file="base_0.obj" />
+    <mesh name="base_1" content_type="model/obj" file="base_1.obj" />
+    <mesh name="base_collision" content_type="model/stl" file="base_collision.stl" />
+    <mesh name="arm_link_1" content_type="model/obj" file="arm_link_1.obj" />
+    <mesh name="arm_link_1_collision" content_type="model/stl" file="arm_link_1_collision.stl" />
+    <mesh name="arm_link_2" content_type="model/obj" file="arm_link_2.obj" />
+    <mesh name="arm_link_2_collision" content_type="model/stl" file="arm_link_2_collision.stl" />
+    <mesh name="arm_link_3_0" content_type="model/obj" file="arm_link_3_0.obj" />
+    <mesh name="arm_link_3_1" content_type="model/obj" file="arm_link_3_1.obj" />
+    <mesh name="arm_link_3_collision" content_type="model/stl" file="arm_link_3_collision.stl" />
+    <mesh name="arm_link_4_0" content_type="model/obj" file="arm_link_4_0.obj" />
+    <mesh name="arm_link_4_1" content_type="model/obj" file="arm_link_4_1.obj" />
+    <mesh name="arm_link_4_collision" content_type="model/stl" file="arm_link_4_collision.stl" />
+    <mesh name="arm_link_5" content_type="model/obj" file="arm_link_5.obj" />
+    <mesh name="arm_link_5_collision" content_type="model/stl" file="arm_link_5_collision.stl" />
+    <mesh name="arm_link_6" content_type="model/obj" file="arm_link_6.obj" />
+    <mesh name="arm_link_6_collision" content_type="model/stl" file="arm_link_6_collision.stl" />
+    <mesh name="hand" content_type="model/obj" file="hand.obj" />
+    <mesh name="hand_collision" content_type="model/stl" file="hand_collision.stl" />
+    <mesh name="hand_right_finger" content_type="model/obj" file="hand_right_finger.obj" />
+    <mesh name="hand_right_finger_collision" content_type="model/stl" file="hand_right_finger_collision.stl" />
+    <mesh name="hand_left_finger" content_type="model/obj" file="hand_left_finger.obj" />
+    <mesh name="hand_left_finger_collision" content_type="model/stl" file="hand_left_finger_collision.stl" />
+    <texture type="skybox" builtin="gradient" width="32" height="32" rgb1="0.93 0.94 0.97" rgb2="0.55 0.62 0.72" />
+    <material name="finish_0" rgba="0.11 0.11 0.115 1" specular="0.64" shininess="0.58" reflectance="0.11" />
+    <material name="finish_1" rgba="0.1 0.1 0.1 1" specular="0.36" shininess="0.25" reflectance="0.02" />
+    <material name="finish_2" rgba="0.9 0.9 0.88 1" specular="0.20" shininess="0.50" reflectance="0.00" />
+  </asset>
+  <worldbody>
+    <light name="sun" directional="true" castshadow="false" pos="-0.690889 -0.704114 1.46439" dir="0.4 0.4 -0.8" diffuse="0.5 0.5 0.5" specular="0.1 0.1 0.1" />
+    <body name="base">
+      <inertial pos="0.000227239 -0.000250638 -0.0562032" quat="0.706917 0.707296 -5.39632e-05 0.000150339" mass="0.265472" diaginertia="0.00068555 0.000650567 0.000243715" />
+      <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="base_0" material="finish_0" />
+      <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="base_1" material="finish_1" />
+      <geom quat="1 0 0 0" type="mesh" rgba="0.1 0.1 0.1 1" mesh="base_collision" group="3" />
+      <body name="arm_link_1">
+        <inertial pos="0.00729619 -0.000291569 0.0205138" quat="0.676159 0.67978 0.202898 -0.198846" mass="0.0572565" diaginertia="8.69856e-05 6.90743e-05 3.2381e-05" />
+        <joint name="arm_joint_1" range="-2.61799 3.14159" actuatorfrcrange="-30 30" />
+        <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_1" material="finish_0" />
+        <geom quat="1 0 0 0" type="mesh" rgba="0.11 0.11 0.115 1" mesh="arm_link_1_collision" group="3" />
+        <body name="arm_link_2" pos="0.02 2.51e-05 0.0409">
+          <inertial pos="-0.133029 0.00248911 0.00117469" quat="0.00361477 0.706918 0.00417921 0.707274" mass="0.508524" diaginertia="0.00476714 0.00468992 0.000329435" />
+          <joint name="arm_joint_2" range="0 3.66519" actuatorfrcrange="-30 30" axis="-7e-06 1 -4e-06" />
+          <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_2" material="finish_0" />
+          <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.11 0.11 0.115 1" mesh="arm_link_2_collision" group="3" />
+          <body name="arm_link_3" pos="-0.264 -2e-06 0">
+            <inertial pos="0.125636 0.00151871 0.0535505" quat="0.0850369 0.664203 0.0658046 0.739779" mass="0.387316" diaginertia="0.00330054 0.00326034 0.000444654" />
+            <joint name="arm_joint_3" range="0 4.01426" actuatorfrcrange="-30 30" axis="7e-06 -1 6e-06" />
+            <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_3_0" material="finish_0" />
+            <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_3_1" material="finish_1" />
+            <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.1 0.1 0.1 1" mesh="arm_link_3_collision" group="3" />
+            <body name="arm_link_4" pos="0.245 2.2e-06 0.0600003">
+              <inertial pos="0.0520862 -0.000395714 0.0442939" quat="0.948193 0.0142614 0.317041 0.0145651" mass="0.13956" diaginertia="0.000348983 0.000316858 9.98065e-05" />
+              <joint name="arm_joint_4" range="-1.65806 1.65806" actuatorfrcrange="-30 30" axis="7e-06 -1 6e-06" />
+              <geom type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_4_0" material="finish_0" />
+              <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_4_1" material="finish_2" />
+              <geom quat="1 0 0 0" type="mesh" rgba="0.9 0.9 0.88 1" mesh="arm_link_4_collision" group="3" />
+              <body name="arm_link_5" pos="0.0739968 -2.37e-05 0.0395003">
+                <inertial pos="-0.00458257 -0.000293683 -0.0322483" quat="0.701206 -0.0809647 -0.123799 0.697444" mass="0.0903885" diaginertia="5.86686e-05 5.28613e-05 3.99072e-05" />
+                <joint name="arm_joint_5" range="-1.5708 1.5708" actuatorfrcrange="-30 30" axis="4e-06 -6e-06 -1" />
+                <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_5" material="finish_0" />
+                <geom quat="1 0 0 0" type="mesh" rgba="0.11 0.11 0.115 1" mesh="arm_link_5_collision" group="3" />
+                <body name="arm_link_6" pos="0.0353001 -1e-07 -0.0394999">
+                  <inertial pos="-0.0051645 -0.00096808 0.00077825" quat="0.922342 0.386196 -0.0109863 -0.00415684" mass="0.0269531" diaginertia="9.64241e-06 5.35995e-06 4.91283e-06" />
+                  <joint name="arm_joint_6" range="-2.35619 1.8326" actuatorfrcrange="-30 30" axis="1 4e-06 7e-06" />
+                  <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="arm_link_6" material="finish_0" />
+                  <geom quat="1 0 0 0" type="mesh" rgba="0.11 0.11 0.115 1" mesh="arm_link_6_collision" group="3" />
+                  <body name="hand" pos="-0.0003369 -0.0003015 2.93e-05">
+                    <inertial pos="0.0368661 -5.69786e-07 -8.63435e-05" quat="0.497964 0.493321 -0.50177 0.506847" mass="0.208718" diaginertia="0.000169473 0.000137387 0.00011719" />
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="hand" material="finish_1" />
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.1 0.1 0.1 1" mesh="hand_collision" group="3" />
+                  </body>
+                  <body name="hand_right_finger" pos="0.0650002 -0.0534637 6.78392e-07">
+                    <inertial pos="0.021831 0.0510907 0.00432709" quat="-0.0667724 0.753687 0.336887 0.560361" mass="0.0420624" diaginertia="3.18866e-05 2.79395e-05 1.68981e-05" />
+                    <joint name="hand_finger_joint1" type="slide" range="0.01081 0.0594641" actuatorfrcrange="-100 100" axis="-4e-06 1 -3e-06" />
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="hand_right_finger" material="finish_1" />
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.1 0.1 0.1 1" mesh="hand_right_finger_collision" group="3" />
+                  </body>
+                  <body name="hand_left_finger" pos="0.0649999 0.0534643 3.21608e-07">
+                    <inertial pos="0.0218309 -0.0516944 -0.00426947" quat="0.336886 0.560362 -0.0667691 0.753687" mass="0.0420624" diaginertia="3.18865e-05 2.79394e-05 1.68981e-05" />
+                    <joint name="hand_finger_joint2" type="slide" range="0.01081 0.0594641" actuatorfrcrange="-100 100" axis="4e-06 -1 3e-06" />
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="2" density="0" mesh="hand_left_finger" material="finish_1" />
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" rgba="0.1 0.1 0.1 1" mesh="hand_left_finger_collision" group="3" />
+                  </body>
+                  <body name="arm_tcp" pos="0.13 5e-07 1e-06" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <joint name="hand_finger_joint2_mimics_hand_finger_joint1" joint1="hand_finger_joint2" joint2="hand_finger_joint1" polycoef="0 1 0 0 0" />
+  </equality>
+  <visual>
+    <global offwidth="1280" offheight="960" />
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" />
+  </visual>
+</mujoco>
